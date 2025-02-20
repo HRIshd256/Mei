@@ -30,8 +30,9 @@ nav {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Align menu to the left */
     gap: 20px;
+    padding-left: 20px; /* Adds spacing from the left */
 }
 
 .navbar li {
@@ -87,7 +88,7 @@ nav {
 #hero {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 50vh; /* Reduced from 100vh */
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -116,7 +117,7 @@ nav {
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.6); /* Darker overlay */
+    background: rgba(0, 0, 0, 0.3); /* Reduced opacity from 0.6 to 0.3 */
     z-index: 2; /* Ensures overlay is above the image but below text */
 }
 
