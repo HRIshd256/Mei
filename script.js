@@ -1,6 +1,6 @@
 // Sample data (replace with your actual files)
 const books = [
-    { title: "Aadhi Mei Udaya Poorana Vedandham", file: "assets/books/Aadhi Mei Udaya Poorana Vedandham (2).pdf" },
+    { title: "Aadhi Mei Udaya Poorana Vedandham", file: "https://drive.google.com/file/d/1itdk7IMuLoSMJjZkqeqUgQ0YvNoBSNSc/view?usp=sharing" },
     { title: "Aanadavargal Maanniyam", file: "assets/books/Aandavargal Maanmiyam.pdf" },
     { title: "ARARULAMUDHAM", file: "ARARULAMUDHAM.pdf" },
     { title: "Yema Padararipadu KodaiyidhaKoor", file: "assets/books/Yema Padaradipadu KodayidhakKoor (1)_compressed.pdf" },
