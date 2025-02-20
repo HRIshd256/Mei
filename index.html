@@ -3,27 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meivazhi Salai - Books & Audio</title>
+    <title>Meivazhi Salai - Community Hub</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <h1>Welcome to Meivazhi Salai</h1>
-        <p>A place for spiritual books and divine audio</p>
+        <nav>
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Books <i class="fas fa-book"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#books">Spiritual Books</a></li>
+                        <li><a href="#mp3">Audio Collection</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Community <i class="fas fa-users"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#calendar">Calendar</a></li>
+                        <li><a href="#festivals">Upcoming Festivals</a></li>
+                        <li><a href="#bus-timings">Bus Timings</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Contact <i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="books">
-        <h2>Books to Read</h2>
-        <div id="book-list">
-            <!-- Books will be added dynamically via JavaScript -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Welcome to Meivazhi Salai</h1>
+            <p>Your gateway to spiritual books, divine audio, and community updates.</p>
+            <a href="#books" class="btn">Explore Books</a>
         </div>
     </section>
 
-    <section id="audio">
-        <h2>MP3 Files</h2>
-        <div id="mp3-list">
-            <!-- MP3 files will be added dynamically via JavaScript -->
-        </div>
+    <section id="books" class="content-section">
+        <h2>Books Collection</h2>
+        <div class="content-grid" id="book-list"></div>
+    </section>
+
+    <section id="mp3" class="content-section">
+        <h2>Audio Collection</h2>
+        <div class="content-grid" id="mp3-list"></div>
+    </section>
+
+    <section id="calendar" class="content-section">
+        <h2>Community Calendar</h2>
+        <p>Upcoming events and spiritual gatherings.</p>
+    </section>
+
+    <section id="festivals" class="content-section">
+        <h2>Upcoming Festivals</h2>
+        <p>Stay updated with our festival celebrations.</p>
+    </section>
+
+    <section id="bus-timings" class="content-section">
+        <h2>Bus Timings</h2>
+        <p>Find transportation schedules to our community center.</p>
     </section>
 
     <footer>
