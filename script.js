@@ -2,7 +2,7 @@
 const books = [
     { title: "Aadhi Mei Udaya Poorana Vedandham", file: "assets/books/Aadhi Mei Udaya Poorana Vedandham (2).pdf" },
     { title: "Aanadavargal Maanniyam", file: "assets/books/Aandavargal Maanmiyam.pdf" },
-    { title: "ARARULAMUDHAM", file: "assets/books/ARARULAMUDHAM.pdf" },
+    { title: "ARARULAMUDHAM", file: "ARARULAMUDHAM.pdf" },
     { title: "Yema Padararipadu KodaiyidhaKoor", file: "assets/books/Yema Padaradipadu KodayidhakKoor (1)_compressed.pdf" },
     { title: "Yeman Padar Adipad Thiru Mei Gnana Koral", file: "assets/books/Yeman Padar Adipadu Thiru Mei Gnana Koral (2)_compressed.pdf" }
 ];
