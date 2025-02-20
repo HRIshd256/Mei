@@ -1,10 +1,10 @@
 // Sample data (replace with your actual files)
 const books = [
-    { title: "Aadhi Mei Udaya Poorana Vedandham", file: "https://drive.google.com/file/d/1itdk7IMuLoSMJjZkqeqUgQ0YvNoBSNSc/view?usp=sharing" },
-    { title: "Aanadavargal Maanniyam", file: "https://drive.google.com/file/d/1Bo_IWHxIHzKSrRQO9IwKW7P8Mvt6893n/view?usp=sharing" },
-    { title: "ARARULAMUDHAM", file: "https://drive.google.com/file/d/1qN8DPZU9jRxvuLTRMrt9dJ3RotFnPMNt/view?usp=sharing" },
-    { title: "Yema Padararipadu KodaiyidhaKoor", file: "https://drive.google.com/file/d/1q8w6jOk4YEs2GjnIjcUIZuseh-1iWL7K/view?usp=sharing" },
-    { title: "Yeman Padar Adipad Thiru Mei Gnana Koral", file: "https://drive.google.com/file/d/1RhM9Wg6_I8SJea-fI3pyi1fMTaIj6ers/view?usp=sharing" }
+    { title: "Aadhi Mei Udaya Poorana Vedandham", file: "https://drive.google.com/uc?export=view&id=1itdk7IMuLoSMJjZkqeqUgQ0YvNoBSNSc" },
+    { title: "Aanadavargal Maanniyam", file: "https://drive.google.com/uc?export=view&id=1Bo_IWHxIHzKSrRQO9IwKW7P8Mvt6893n" },
+    { title: "ARARULAMUDHAM", file: "https://drive.google.com/uc?export=view&id=1qN8DPZU9jRxvuLTRMrt9dJ3RotFnPMNt" },
+    { title: "Yema Padararipadu KodaiyidhaKoor", file: "https://drive.google.com/uc?export=view&id=1q8w6jOk4YEs2GjnIjcUIZuseh-1iWL7K" },
+    { title: "Yeman Padar Adipad Thiru Mei Gnana Koral", file: "https://drive.google.com/uc?export=view&id=1RhM9Wg6_I8SJea-fI3pyi1fMTaIj6ers" }
 ];
 
 const mp3s = [
