@@ -1,10 +1,10 @@
 // Sample data (replace with your actual files)
 const books = [
     { title: "Aadhi Mei Udaya Poorana Vedandham", file: "https://drive.google.com/file/d/1itdk7IMuLoSMJjZkqeqUgQ0YvNoBSNSc/view?usp=sharing" },
-    { title: "Aanadavargal Maanniyam", file: "assets/books/Aandavargal Maanmiyam.pdf" },
-    { title: "ARARULAMUDHAM", file: "ARARULAMUDHAM.pdf" },
-    { title: "Yema Padararipadu KodaiyidhaKoor", file: "assets/books/Yema Padaradipadu KodayidhakKoor (1)_compressed.pdf" },
-    { title: "Yeman Padar Adipad Thiru Mei Gnana Koral", file: "assets/books/Yeman Padar Adipadu Thiru Mei Gnana Koral (2)_compressed.pdf" }
+    { title: "Aanadavargal Maanniyam", file: "https://drive.google.com/file/d/1Bo_IWHxIHzKSrRQO9IwKW7P8Mvt6893n/view?usp=sharing" },
+    { title: "ARARULAMUDHAM", file: "https://drive.google.com/file/d/1qN8DPZU9jRxvuLTRMrt9dJ3RotFnPMNt/view?usp=sharing" },
+    { title: "Yema Padararipadu KodaiyidhaKoor", file: "https://drive.google.com/file/d/1q8w6jOk4YEs2GjnIjcUIZuseh-1iWL7K/view?usp=sharing" },
+    { title: "Yeman Padar Adipad Thiru Mei Gnana Koral", file: "https://drive.google.com/file/d/1RhM9Wg6_I8SJea-fI3pyi1fMTaIj6ers/view?usp=sharing" }
 ];
 
 const mp3s = [
