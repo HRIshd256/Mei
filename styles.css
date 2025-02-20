@@ -24,8 +24,60 @@ body {
     top: 0;
     z-index: 1000;
     padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+/* Left Menu */
+.left-menu {
+    position: relative;
+}
+
+.left-hamburger {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.left-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: white;
+    list-style: none;
+    padding: 8px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+}
+
+.left-dropdown-menu li {
+    padding: 0;
+}
+
+.left-dropdown-menu a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px 15px;
+    font-size: 1em;
+}
+
+.left-dropdown-menu a:hover {
+    background-color: #f5f5f5;
+}
+
+/* Show dropdown on click */
+.left-menu:hover .left-dropdown-menu {
+    display: block;
+}
+
+/* Navbar */
 .navbar {
     max-width: 1200px;
     margin: 0 auto;
@@ -151,6 +203,7 @@ body {
         display: block;
     }
 }
+
 
 /* Hero Section */
 #hero {
