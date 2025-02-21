@@ -62,7 +62,8 @@ function setupScroll() {
         return;
     }
 
-    const scrollAmount = 300; // Adjust based on item width (e.g., 220px + gap)
+    // Dynamic scroll amount based on screen width
+    const scrollAmount = window.innerWidth <= 768 ? 220 : 300; // 220px for mobile (item width), 300px for desktop
     let isScrolling = false; // Prevent overlapping animations
 
     function smoothScroll(direction) {
