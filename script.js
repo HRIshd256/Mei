@@ -1,4 +1,3 @@
-
 // Sample Data
 const books = [
     { title: "Aadhi Mei Udaya Poorana Vedandham", file: "assets/books/Aadhi Mei Udaya Poorana Vedandham.pdf" },
@@ -16,12 +15,16 @@ const mp3s = [
 // Load Books
 function loadBooks() {
     const bookList = document.getElementById("book-list");
+    if (!bookList) {
+        console.error("Element with ID 'book-list' not found.");
+        return;
+    }
     books.forEach(book => {
         const div = document.createElement("div");
         div.className = "item";
         div.innerHTML = `
             <h3>${book.title}</h3>
-            <a href="${book.file}" target="_blank">📖 Read Now</a>
+            <a href="${book.file}" target="_blank" aria-label="Read ${book.title}">📖 Read Now</a>
         `;
         bookList.appendChild(div);
     });
@@ -30,6 +33,10 @@ function loadBooks() {
 // Load MP3s
 function loadMp3s() {
     const mp3List = document.getElementById("mp3-list");
+    if (!mp3List) {
+        console.error("Element with ID 'mp3-list' not found.");
+        return;
+    }
     mp3s.forEach(mp3 => {
         const div = document.createElement("div");
         div.className = "item";
@@ -44,10 +51,54 @@ function loadMp3s() {
     });
 }
 
+// Setup Scroll Functionality for Books with Enhanced Animation
+function setupScroll() {
+    const bookList = document.getElementById("book-list");
+    const leftArrow = document.querySelector(".left-arrow");
+    const rightArrow = document.querySelector(".right-arrow");
+
+    if (!bookList || !leftArrow || !rightArrow) {
+        console.error("Required elements for scrolling not found.");
+        return;
+    }
+
+    const scrollAmount = 300; // Adjust based on item width (e.g., 220px + gap)
+    let isScrolling = false; // Prevent overlapping animations
+
+    function smoothScroll(direction) {
+        if (isScrolling) return; // Prevent multiple clicks during animation
+        isScrolling = true;
+
+        const targetScroll = direction === "left" ? -scrollAmount : scrollAmount;
+        bookList.scrollBy({
+            left: targetScroll,
+            behavior: "smooth"
+        });
+
+        // Reset the flag after the animation completes (approximate duration)
+        setTimeout(() => {
+            isScrolling = false;
+        }, 500); // Matches the CSS transition duration (adjust if needed)
+    }
+
+    leftArrow.addEventListener("click", () => smoothScroll("left"));
+    rightArrow.addEventListener("click", () => smoothScroll("right"));
+
+    // Add visual feedback to arrows on click
+    [leftArrow, rightArrow].forEach(arrow => {
+        arrow.addEventListener("click", () => {
+            arrow.classList.add("clicked");
+            setTimeout(() => arrow.classList.remove("clicked"), 300); // Brief pulse effect
+        });
+    });
+}
+
+// Hamburger Menu Toggle
 document.querySelector('.hamburger').addEventListener('click', function() {
     document.querySelector('.nav-menu').classList.toggle('active');
 });
 
+// Dropdown Toggle for Mobile
 document.querySelectorAll('.dropdown').forEach(dropdown => {
     dropdown.addEventListener('click', function(e) {
         if (window.innerWidth <= 768) {
@@ -57,8 +108,9 @@ document.querySelectorAll('.dropdown').forEach(dropdown => {
     });
 });
 
-// Load Content on Page Load
+// Load Content and Setup Scroll on Page Load
 window.onload = function() {
     loadBooks();
     loadMp3s();
+    setupScroll();
 };
