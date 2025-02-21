@@ -255,10 +255,10 @@ h2 {
     margin: 0 auto;
 }
 
-/* Scroll Arrows - Transparent Gold, Modernized */
+/* Scroll Arrows - No Circle Background */
 .scroll-arrow {
-    color: rgba(198, 151, 73, 0.2); /* Very transparent gold */
-    font-size: 32px; /* Larger for modern look */
+    color: #c69749; /* Gold color for arrows */
+    font-size: 28px; /* Slightly larger for visibility */
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -268,26 +268,25 @@ h2 {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
 }
 
 .scroll-arrow:hover {
-    color: rgba(198, 151, 73, 0.8); /* More opaque gold on hover */
-    transform: translateY(-50%) scale(1.2); /* Smooth scale */
+    color: #8b5e34; /* Bronze on hover */
+    transform: translateY(-50%) scale(1.2); /* Slightly larger on hover */
 }
 
 .scroll-arrow.clicked {
-    color: rgba(198, 151, 73, 1); /* Full gold on click */
     transform: translateY(-50%) scale(1.3); /* Brief scale on click */
+    color: #8b5e34;
     transition: all 0.1s ease;
 }
 
 .left-arrow {
-    left: -30px; /* Adjusted positioning */
+    left: -30px; /* Adjusted positioning without circle */
 }
 
 .right-arrow {
-    right: -30px; /* Adjusted positioning */
+    right: -30px; /* Adjusted positioning without circle */
 }
 
 /* Grid Layout */
