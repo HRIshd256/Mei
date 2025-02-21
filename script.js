@@ -57,41 +57,43 @@ function setupScroll() {
     const leftArrow = document.querySelector(".left-arrow");
     const rightArrow = document.querySelector(".right-arrow");
 
-    if (!bookList || !leftArrow || !rightArrow) {
-        console.error("Required elements for scrolling not found.");
+    if (!bookList) {
+        console.error("Element with ID 'book-list' not found.");
         return;
     }
 
-    // Dynamic scroll amount based on screen width
-    const scrollAmount = window.innerWidth <= 768 ? 220 : 300; // 220px for mobile (item width), 300px for desktop
-    let isScrolling = false; // Prevent overlapping animations
+    // Only setup arrow events if arrows exist (they’ll be hidden on mobile via CSS)
+    if (leftArrow && rightArrow) {
+        const scrollAmount = window.innerWidth <= 768 ? 220 : 300; // 220px for mobile, 300px for desktop
+        let isScrolling = false; // Prevent overlapping animations
 
-    function smoothScroll(direction) {
-        if (isScrolling) return; // Prevent multiple clicks during animation
-        isScrolling = true;
+        function smoothScroll(direction) {
+            if (isScrolling) return; // Prevent multiple clicks during animation
+            isScrolling = true;
 
-        const targetScroll = direction === "left" ? -scrollAmount : scrollAmount;
-        bookList.scrollBy({
-            left: targetScroll,
-            behavior: "smooth"
+            const targetScroll = direction === "left" ? -scrollAmount : scrollAmount;
+            bookList.scrollBy({
+                left: targetScroll,
+                behavior: "smooth"
+            });
+
+            // Reset the flag after the animation completes
+            setTimeout(() => {
+                isScrolling = false;
+            }, 500); // Matches CSS transition duration
+        }
+
+        leftArrow.addEventListener("click", () => smoothScroll("left"));
+        rightArrow.addEventListener("click", () => smoothScroll("right"));
+
+        // Add visual feedback to arrows on click
+        [leftArrow, rightArrow].forEach(arrow => {
+            arrow.addEventListener("click", () => {
+                arrow.classList.add("clicked");
+                setTimeout(() => arrow.classList.remove("clicked"), 300); // Brief pulse effect
+            });
         });
-
-        // Reset the flag after the animation completes (approximate duration)
-        setTimeout(() => {
-            isScrolling = false;
-        }, 500); // Matches the CSS transition duration (adjust if needed)
     }
-
-    leftArrow.addEventListener("click", () => smoothScroll("left"));
-    rightArrow.addEventListener("click", () => smoothScroll("right"));
-
-    // Add visual feedback to arrows on click
-    [leftArrow, rightArrow].forEach(arrow => {
-        arrow.addEventListener("click", () => {
-            arrow.classList.add("clicked");
-            setTimeout(() => arrow.classList.remove("clicked"), 300); // Brief pulse effect
-        });
-    });
 }
 
 // Hamburger Menu Toggle
