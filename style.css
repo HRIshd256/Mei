@@ -1,0 +1,168 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #f8f3e1, #e2c799);
+    color: #4a2e12;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background: #764c24;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+
+.menu-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Style the h1 (Meivazhi Saalai) */
+header h1 {
+    margin: 0; /* Remove default margin for tighter control */
+    font-size: 24px; /* Slightly smaller than default h1 for balance */
+    font-family: 'Georgia', serif; /* A more elegant font */
+    font-weight: bold; /* Strong presence */
+    letter-spacing: 1px; /* Adds sophistication */
+    text-transform: uppercase; /* Makes it stand out */
+    line-height: 1; /* Aligns better with menu icon */
+}
+/* Calendar Section */
+.calendar-container {
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    max-width: 90%;
+}
+
+/* Style the embedded Google Calendar */
+.calendar-container iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add a hover effect for subtle animation */
+.calendar-container iframe:hover {
+    transform: scale(1.01);
+}
+
+/* Responsive Design for Calendar */
+@media (max-width: 768px) {
+    .calendar-container iframe {
+        height: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-container iframe {
+        height: 400px;
+    }
+}
+/* Dropdown Menu */
+nav {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hidden */
+    background: rgba(139, 94, 52, 0.95);
+    width: 250px;
+    height: 100%;
+    padding-top: 60px;
+    transition: left 0.4s ease-in-out;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.3s ease;
+    background-color: transparent; /* or whatever color you want */
+}
+
+nav ul li:hover {
+    background: rgba(212, 163, 115, 0.8);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 20px;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    transform: translateX(10px);
+}
+
+/* Open class for menu */
+nav.open {
+    left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav {
+        width: 200px;
+    }
+}
+/* Sections */
+section {
+    padding: 20px;
+}
+
+/* Footer */
+/* Ensure the page takes the full height */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content should expand to push the footer down */
+main {
+    flex: 1;
+}
+
+/* Footer stays at the bottom */
+footer {
+    background: #764c24;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav {
+        width: 100%;
+    }
+}

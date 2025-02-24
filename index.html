@@ -1,89 +1,40 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meivazhi Salai - Community Hub</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Meivazhi Saalai</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <nav class="nav-container">
-            <div class="left-menu">
-                <button class="left-hamburger">☰</button>
-                <ul class="left-dropdown-menu">
-                    <li><a href="#">Option 1</a></li>
-                    <li><a href="#">Option 2</a></li>
-                    <li><a href="#">Option 3</a></li>
-                </ul>
-            </div>
-            <div class="navbar">
-                <button class="hamburger">☰</button>
-                <ul class="nav-menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li class="dropdown">
-                        <a href="#">Services</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Service 1</a></li>
-                            <li><a href="#">Service 2</a></li>
-                            <li><a href="#">Service 3</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    
-    <style>
-        @media (max-width: 768px) {
-            .navbar {
-                display: none;
-            }
-        }
-    </style>    
+<header>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <h1>Meivazhi Saalai</h1>
+</header>
 
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Welcome to Meivazhi Salai</h1>
-            <p>Your gateway to spiritual books, divine audio, and community updates.</p>
-            <a href="#books" class="btn">Explore Books</a>
-        </div>
-    </section>
+    <nav id="dropdown-menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#calendar">Calendar</a></li>
+            <li><a href="#bus-details">Bus Details</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+            <li><a href="#youtube">YouTube Channels</a></li>
+            <li><a href="#updates">Special Updates</a></li>
+            <li><a href="#images">Images</a></li>
+        </ul>
+    </nav>
 
-    <section id="books" class="content-section">
-        <h2>Books Collection</h2>
-        <div class="content-grid" id="book-list"></div>
-    </section>
-
-    <section id="mp3" class="content-section">
-        <h2>Audio Collection</h2>
-        <div class="content-grid" id="mp3-list"></div>
-    </section>
-
-    <section id="calendar" class="content-section">
-        <h2>Community Calendar</h2>
-        <p>Upcoming events and spiritual gatherings.</p>
-    </section>
-
-    <section id="festivals" class="content-section">
-        <h2>Upcoming Festivals</h2>
-        <p>Stay updated with our festival celebrations.</p>
-    </section>
-
-    <section id="bus-timings" class="content-section">
-        <h2>Bus Timings</h2>
-        <p>Find transportation schedules to our community center.</p>
-    </section>
-
+    <main>
+        <section id="home">
+            <h2>Welcome to Meivazhi Saalai</h2>
+            <p>A divine space to access books, music, and important information about Meivazhi Saalai.</p>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2025 Meivazhi Salai. All rights reserved.</p>
+        <p>&copy; 2025 Meivazhi Saalai. All Rights Reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
-    
 </body>
 </html>
