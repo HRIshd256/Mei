@@ -3,13 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genesys Cloud API</title>
+    <title>Meivazhi Saalai</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h2>Genesys Cloud API - Get Token</h2>
-    <button id="getTokenBtn">Get OAuth Token</button>
-    <p id="result"></p>
+    <header>
+        <h1>Meivazhi Saalai</h1>
+        <nav>
+            <ul>
+                <li><a href="vedams.html">Vedams</a></li>
+                <li><a href="festival.html">Festivals</a></li>
+                <li><a href="transport.html">Bus Timings</a></li>
+                <li><a href="mp3.html">MP3 Section</a></li>
+                <li><a href="images.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <script src="script.js"></script>
+    <section id="vedams">
+        <h2>Four Main Vedams</h2>
+        <div class="vedam-list">
+            <div class="vedam">Vedam 1</div>
+            <div class="vedam">Vedam 2</div>
+            <div class="vedam">Vedam 3</div>
+            <div class="vedam">Vedam 4</div>
+        </div>
+        <a href="vedams.html">View All Vedams</a>
+    </section>
+
+    <section id="youtube-videos">
+        <h2>Meivazhi Saalai Festivals</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/sample-video" frameborder="0"></iframe>
+    </section>
+
+    <section id="festivals">
+        <h2>Upcoming Festivals</h2>
+        <div id="festival-list"></div>
+    </section>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
