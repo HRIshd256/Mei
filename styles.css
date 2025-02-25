@@ -1,77 +1,194 @@
+/* Import a modern, professional font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Body styling with a softer gradient */
 body {
-    background: linear-gradient(to bottom, #003366, #99ccff);
-    font-family: Arial, sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
+  background: linear-gradient(to bottom, #e6f2ff, #99ccff);
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
+
+/* Header with a subtle gradient transition */
 header {
-    background: #fff;
-    padding: 10px;
+  background: linear-gradient(to bottom, white 15%, #e6f2ff 100%);
+  padding: 20px;
 }
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
+
+/* Top bar layout with improved spacing */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-nav a {
-    text-decoration: none;
-    color: #000;
+
+/* Logo styling */
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #000;
 }
+
+/* Main navigation with enhanced spacing and hover effects */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* Increased for better readability */
+  align-items: center;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #0066cc; /* Vibrant blue for interactivity */
+}
+
+.main-nav a.active {
+  color: #0066cc;
+  font-weight: bold; /* Highlight current page */
+}
+
+/* Header content with centered, bold typography */
+.header-content {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.header-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #000; /* High contrast */
+}
+
+.header-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/* Vibrant, modern CTA button */
+.header-content button {
+  background: #0066cc; /* Trendy blue */
+  color: white;
+  padding: 12px 24px; /* Slightly larger for prominence */
+  border: none;
+  border-radius: 25px; /* Softer, modern rounding */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease; /* Smooth animations */
+}
+
+.header-content button:hover {
+  background: #004c99; /* Darker shade on hover */
+  transform: scale(1.05); /* Subtle scale effect */
+}
+
+/* Secondary CTA for additional engagement */
+.secondary-cta {
+  margin-left: 20px;
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.secondary-cta:hover {
+  text-decoration: underline;
+}
+
+/* Main content container */
 main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
+  margin-top: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
+
+/* Vedams highlight with card-based layout */
 #vedams-highlight {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
+
 .vedam {
-    width: 23%;
-    padding: 10px;
-    background: #f0f0f0;
-    border-radius: 5px;
+  width: 23%;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Modern card effect */
 }
+
+/* Video section with a polished container */
 #videos {
-    text-align: center;
+  text-align: center;
 }
+
+.video-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 #videos iframe {
-    width: 100%;
-    height: 400px;
+  width: 100%;
+  height: 400px;
 }
+
+/* Image gallery with hover interactivity */
 #image-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
 }
+
 #image-gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease; /* Smooth zoom on hover */
 }
+
+#image-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer styling */
 footer {
-    text-align: center;
-    padding: 10px;
-    background: #fff;
+  text-align: center;
+  padding: 10px;
+  background: #fff;
 }
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    #vedams-highlight {
-        flex-direction: column;
-    }
-    .vedam {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-    #videos iframe {
-        height: 250px;
-    }
+
+/* Mobile responsiveness with hamburger menu setup */
+@media (max-width: 768px) {
+  .main-nav ul {
+    display: none; /* Hide nav for hamburger menu (requires JS) */
+  }
+  
+  .hamburger {
+    display: block; /* Show hamburger icon (requires HTML/JS) */
+  }
+  
+  #vedams-highlight {
+    flex-direction: column;
+  }
+  
+  .vedam {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  #videos iframe {
+    height: 250px;
+  }
 }
