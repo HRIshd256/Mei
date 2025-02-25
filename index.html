@@ -4,43 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meivazhi Saalai</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Meivazhi Saalai</h1>
-        <nav>
-            <ul>
-                <li><a href="vedams.html">Vedams</a></li>
-                <li><a href="festival.html">Festivals</a></li>
-                <li><a href="transport.html">Bus Timings</a></li>
-                <li><a href="mp3.html">MP3 Section</a></li>
-                <li><a href="images.html">Gallery</a></li>
-            </ul>
-        </nav>
+    <nav class="navbar">
+        <div class="logo">Meivazhi Saalai</div>
+        <ul class="nav-links">
+            <li><a href="#vedams">Vedams</a></li>
+            <li><a href="#festivals">Festivals</a></li>
+            <li><a href="#calendar">Calendar</a></li>
+            <li><a href="#bus-timings">Bus Timings</a></li>
+            <li><a href="#mp3">MP3</a></li>
+            <li><a href="#images">Images</a></li>
+        </ul>
+    </nav>
+    
+    <header class="hero">
+        <h1>Experience Meivazhi Saalai</h1>
+        <p>Discover our sacred texts, festivals, and more.</p>
+        <a href="#vedams" class="cta-button">Explore Vedams</a>
     </header>
-
-    <section id="vedams">
-        <h2>Four Main Vedams</h2>
-        <div class="vedam-list">
-            <div class="vedam">Vedam 1</div>
-            <div class="vedam">Vedam 2</div>
-            <div class="vedam">Vedam 3</div>
-            <div class="vedam">Vedam 4</div>
-        </div>
-        <a href="vedams.html">View All Vedams</a>
+    
+    <section id="vedams" class="content">
+        <h2>Main Vedams</h2>
+        <ul>
+            <li>Vedam 1</li>
+            <li>Vedam 2</li>
+            <li>Vedam 3</li>
+            <li>Vedam 4</li>
+        </ul>
     </section>
-
-    <section id="youtube-videos">
-        <h2>Meivazhi Saalai Festivals</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/sample-video" frameborder="0"></iframe>
-    </section>
-
-    <section id="festivals">
-        <h2>Upcoming Festivals</h2>
-        <div id="festival-list"></div>
-    </section>
-
-    <script src="js/script.js"></script>
 </body>
 </html>
