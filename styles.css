@@ -110,21 +110,115 @@ main {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-/* Vedams highlight with card-based layout */
+/* Vedams highlight with grid-based layout like Flipkart cards */
 #vedams-highlight {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  background-color: #fff;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 40px auto 0;
+}
+
+.vedams-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 4 cards per row on desktop, adjusts dynamically */
+  gap: 20px; /* Spacing between cards */
 }
 
 .vedam {
-  width: 23%;
-  padding: 15px;
-  background: #fff;
+  background-color: #fff;
+  border: 1px solid #e0e0e0; /* Light gray border like Flipkart */
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Modern card effect */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
+.vedam:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Optional image styling (if you add images) */
+.vedam-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Vedam title (book name) */
+.vedam h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #666; /* Gray text, matching Flipkart titles */
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white overlay for readability */
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+/* Download PDF button */
+.vedam a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  background: #000; /* Black button, matching Flipkart */
+  padding: 10px 20px;
+  border-radius: 20px; /* Rounded button, matching Flipkart */
+  transition: background 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.vedam a:hover {
+  background: #333; /* Darker gray on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+#vedams-highlight > p {
+  text-align: center;
+  margin-top: 20px; /* Spacing above the "View all Vedams" link */
+}
+
+#vedams-highlight a {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#vedams-highlight a:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1024px) {
+  .vedams-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 3 cards per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  #vedams-highlight {
+    padding: 20px;
+  }
+
+  .vedams-container {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* 2 cards per row on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .vedams-container {
+    grid-template-columns: 1fr; /* 1 card per row on very small screens */
+  }
+}
 /* Video section with a polished container */
 #videos {
   text-align: center;
