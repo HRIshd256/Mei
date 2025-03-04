@@ -21,25 +21,263 @@
             </ul>
           </nav>
         </div>
-        <div class="header-content">
-          <h1>Discover the Teachings of Meivazhi</h1>
-          <p>Explore the sacred Vedams and join our vibrant festivals</p>
-          <button onclick="window.location.href='vedams.html'">Explore Vedams</button>
-        </div>
       </header>
     <main>
         <h1>Festivals at Meivazhi Saalai</h1>
-        <section id="all-festivals">
-            <h2>All Festivals</h2>
-            <ul>
-                <li>Festival 1 - December 25, 2023</li>
-                <li>Festival 2 - January 1, 2024</li>
-                <!-- Add more festivals with dates -->
-            </ul>
+        
+        <!-- 2025 Calendar Section -->
+        <section id="calendar-2025">
+            <h2>2025 Festival Calendar</h2>
+            <button id="edit-dates-btn-2025" onclick="toggleEditMode('2025')">Edit Dates</button>
+            <table id="festival-calendar-2025" class="festival-calendar">
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Tir</th>
+                        <th>Date</th>
+                        <th>Day</th>
+                        <th>Tiruvizha (Festival)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- March 2025 -->
+                    <tr>
+                        <td rowspan="3">Mar-25</td>
+                        <td>🌑</td>
+                        <td contenteditable="false">1 Mar 2025</td>
+                        <td>Sat</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>🌕</td>
+                        <td contenteditable="false">14 Mar 2025</td>
+                        <td>Fri</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>🌑</td>
+                        <td contenteditable="false">31 Mar 2025</td>
+                        <td>Mon</td>
+                        <td></td>
+                    </tr>
+                    <!-- April 2025 -->
+                    <tr class="festival-row">
+                        <td rowspan="3">Apr-25</td>
+                        <td>🌕</td>
+                        <td contenteditable="false">11 Apr 2025</td>
+                        <td>Fri</td>
+                        <td>Piravannat Pirappu</td>
+                    </tr>
+                    <tr>
+                        <td>🌑</td>
+                        <td contenteditable="false">12 Apr 2025</td>
+                        <td>Sat</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>🌑</td>
+                        <td contenteditable="false">29 Apr 2025</td>
+                        <td>Tue</td>
+                        <td></td>
+                    </tr>
+                    <!-- May 2025 -->
+                    <tr>
+                        <td rowspan="2">May-25</td>
+                        <td>🌕</td>
+                        <td contenteditable="false">12 May 2025</td>
+                        <td>Mon</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>🌑</td>
+                        <td contenteditable="false">28 May 2025</td>
+                        <td>Wed</td>
+                        <td></td>
+                    </tr>
+                    <!-- June 2025 -->
+                    <tr class="festival-row">
+                        <td rowspan="3">Jun-25</td>
+                        <td>🌕</td>
+                        <td contenteditable="false">11 Jun 2025</td>
+                        <td>Wed</td>
+                        <td>Aadu Meilppu</td>
+                    </tr>
+                    <tr class="festival-row">
+                        <td>🌑</td>
+                        <td contenteditable="false">12 Jun 2025</td>
+                        <td>Thu</td>
+                        <td>Paava Mannippu</td>
+                    </tr>
+                    <tr>
+                        <td>🌑</td>
+                        <td contenteditable="false">27 Jun 2025</td>
+                        <td>Fri</td>
+                        <td></td>
+                    </tr>
+                    <!-- July 2025 -->
+                    <tr>
+                        <td rowspan="2">Jul-25</td>
+                        <td>🌕</td>
+                        <td contenteditable="false">10 Jul 2025</td>
+                        <td>Thu</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>🌑</td>
+                        <td contenteditable="false">26 Jul 2025</td>
+                        <td>Sat</td>
+                        <td></td>
+                    </tr>
+                    <!-- August 2025 -->
+                    <tr>
+                        <td rowspan="2">Aug-25</td>
+                        <td>🌕</td>
+                        <td contenteditable="false">9 Aug 2025</td>
+                        <td>Sat</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>🌑</td>
+                        <td contenteditable="false">25 Aug 2025</td>
+                        <td>Mon</td>
+                        <td></td>
+                    </tr>
+                    <!-- September 2025 -->
+                    <tr>
+                        <td rowspan="2">Sep-25</td>
+                        <td>🌕</td>
+                        <td contenteditable="false">7 Sep 2025</td>
+                        <td>Sun</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>🌑</td>
+                        <td contenteditable="false">23 Sep 2025</td>
+                        <td>Tue</td>
+                        <td></td>
+                    </tr>
+                    <!-- October 2025 -->
+                    <tr class="festival-row">
+                        <td rowspan="2">Oct-25</td>
+                        <td>🌕</td>
+                        <td contenteditable="false">7 Oct 2025</td>
+                        <td>Tue</td>
+                        <td>Pichai Aandu</td>
+                    </tr>
+                    <tr>
+                        <td>🌑</td>
+                        <td contenteditable="false">23 Oct 2025</td>
+                        <td>Thu</td>
+                        <td></td>
+                    </tr>
+                    <!-- November 2025 -->
+                    <tr>
+                        <td rowspan="2">Nov-25</td>
+                        <td>🌕</td>
+                        <td contenteditable="false">5 Nov 2025</td>
+                        <td>Wed</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>🌑</td>
+                        <td contenteditable="false">22 Nov 2025</td>
+                        <td>Sat</td>
+                        <td></td>
+                    </tr>
+                    <!-- December 2025 -->
+                    <tr class="festival-row">
+                        <td rowspan="2">Dec-25</td>
+                        <td>🌕</td>
+                        <td contenteditable="false">4 Dec 2025</td>
+                        <td>Thu</td>
+                        <td>Deepa Tiruvizha</td>
+                    </tr>
+                    <tr>
+                        <td>🌑</td>
+                        <td contenteditable="false">22 Dec 2025</td>
+                        <td>Mon</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 2026 Calendar Section -->
+        <section id="calendar-2026">
+            <h2>2026 Festival Calendar</h2>
+            <button id="edit-dates-btn-2026" onclick="toggleEditMode('2026')">Edit Dates</button>
+            <table id="festival-calendar-2026" class="festival-calendar">
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Tir</th>
+                        <th>Date</th>
+                        <th>Day</th>
+                        <th>Tiruvizha (Festival)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- January 2026 -->
+                    <tr>
+                        <td rowspan="5">Jan-26</td>
+                        <td>🌕</td>
+                        <td contenteditable="false">3 Jan 2026</td>
+                        <td>Sat</td>
+                        <td></td>
+                    </tr>
+                    <tr class="festival-row">
+                        <td>🌑</td>
+                        <td contenteditable="false">13 Jan 2026</td>
+                        <td>Tue</td>
+                        <td>Tiru Avathara</td>
+                    </tr>
+                    <tr class="festival-row">
+                        <td>🌑</td>
+                        <td contenteditable="false">14 Jan 2026</td>
+                        <td>Wed</td>
+                        <td>Kollari Pongal</td>
+                    </tr>
+                    <tr class="festival-row">
+                        <td>🌑</td>
+                        <td contenteditable="false">15 Jan 2026</td>
+                        <td>Thu</td>
+                        <td>Selva Pongal</td>
+                    </tr>
+                    <tr>
+                        <td>🌑</td>
+                        <td contenteditable="false">20 Jan 2026</td>
+                        <td>Tue</td>
+                        <td></td>
+                    </tr>
+                    <!-- February 2026 -->
+                    <tr>
+                        <td rowspan="2">Feb-26</td>
+                        <td>🌕</td>
+                        <td contenteditable="false">1 Feb 2026</td>
+                        <td>Sun</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>🌑</td>
+                        <td contenteditable="false">19 Feb 2026</td>
+                        <td>Thu</td>
+                        <td></td>
+                    </tr>
+                    <!-- March 2026 -->
+                    <tr>
+                        <td rowspan="1">Mar-26</td>
+                        <td>🌕</td>
+                        <td contenteditable="false">3 Mar 2026</td>
+                        <td>Tue</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 Meivazhi Saalai</p>
+        <p>© 2025 Meivazhi Saalai</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
-/* Import a modern, professional font (already in your code) */
+/* Import a modern, professional font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* Body styling with a lighter background to match Podcastpage */
+/* Body styling with a lighter background */
 body {
   background: #f5faff; /* Light blue background */
   font-family: 'Roboto', Arial, sans-serif;
@@ -130,18 +130,6 @@ header {
   background: #004c99; /* Darker blue on hover */
   transform: scale(1.05);
 }
-
-/* Remove secondary-cta since Podcastpage doesn't have one */
-/* .secondary-cta {
-  margin-left: 20px;
-  color: #0066cc;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.secondary-cta:hover {
-  text-decoration: underline;
-} */
 
 /* Rest of your CSS remains unchanged */
 main {
@@ -373,5 +361,197 @@ footer {
 
   #videos iframe {
     height: 250px;
+  }
+}
+
+/* Calendar Section */
+#calendar-2025,
+#calendar-2026 {
+  margin-top: 40px;
+  padding: 20px;
+  background: #fff; /* White background for the section to create contrast */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#calendar-2025 h2,
+#calendar-2026 h2 {
+  font-size: 2em;
+  color: #1a3c87; /* Dark blue to match the site theme */
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase; /* Uppercase for a bold, professional look */
+  letter-spacing: 1px; /* Slight letter spacing for elegance */
+}
+
+/* Edit Dates Button */
+#edit-dates-btn-2025,
+#edit-dates-btn-2026 {
+  display: block;
+  margin: 0 auto 20px;
+  background: #0066cc;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#edit-dates-btn-2025:hover,
+#edit-dates-btn-2026:hover {
+  background: #004c99;
+  transform: translateY(-2px); /* Slight lift on hover for interactivity */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Calendar Table */
+.festival-calendar {
+  width: 100%;
+  border-collapse: separate; /* Separate borders for better styling */
+  border-spacing: 0; /* Remove default spacing */
+  background: #1a3c87; /* Blue background like the image */
+  color: white;
+  margin: 0 auto;
+  border-radius: 8px; /* Rounded corners for the table */
+  overflow: hidden; /* Ensure rounded corners are visible */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Table Headers and Cells */
+.festival-calendar th,
+.festival-calendar td {
+  padding: 12px 15px; /* Increased padding for better spacing */
+  text-align: center;
+  border: 1px solid #fff; /* White borders between cells */
+  font-size: 1em;
+  font-weight: 500; /* Medium weight for better readability */
+  transition: background 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+/* Table Headers */
+.festival-calendar th {
+  background: #ffcc00; /* Yellow header like the image */
+  color: #1a3c87; /* Dark blue text for contrast */
+  font-weight: 700; /* Bold headers */
+  text-transform: uppercase; /* Uppercase for a professional look */
+  letter-spacing: 0.5px; /* Slight letter spacing */
+  border-top: none; /* Remove top border for a cleaner look */
+}
+
+/* Table Cells */
+.festival-calendar td {
+  background: #1a3c87; /* Blue cells */
+  position: relative; /* For hover effects */
+}
+
+/* Highlight Festival Rows in Red */
+.festival-calendar .festival-row td {
+  background: #ff6666; /* Red background for festival rows */
+  color: #1a3c87; /* Dark blue text for contrast */
+  font-weight: 600; /* Slightly bolder text for emphasis */
+}
+
+/* Hover Effects for Interactivity */
+.festival-calendar tr:hover td {
+  background: #2a4ca8; /* Slightly lighter blue on hover for non-festival rows */
+  transform: scale(1.01); /* Subtle zoom effect on hover */
+}
+
+.festival-calendar .festival-row:hover td {
+  background: #ff8080; /* Lighter red on hover for festival rows */
+}
+
+/* Moon Phase Icons (Tir) */
+.festival-calendar td:nth-child(2) {
+  font-size: 1.2em; /* Larger moon icons */
+}
+
+/* Editable Cells */
+.festival-calendar [contenteditable="true"] {
+  background: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: text;
+  transition: border 0.3s ease;
+}
+
+.festival-calendar [contenteditable="true"]:hover,
+.festival-calendar [contenteditable="true"]:focus {
+  border: 1px solid #0066cc; /* Blue border on hover/focus */
+  outline: none;
+}
+
+/* Remove Border Artifacts for Rowspan Cells */
+.festival-calendar td[rowspan] {
+  border-right: 1px solid #fff; /* Ensure rowspan cells have proper borders */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #calendar-2025,
+  #calendar-2026 {
+    padding: 15px;
+  }
+
+  #calendar-2025 h2,
+  #calendar-2026 h2 {
+    font-size: 1.6em;
+  }
+
+  #edit-dates-btn-2025,
+  #edit-dates-btn-2026 {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+
+  .festival-calendar th,
+  .festival-calendar td {
+    padding: 8px 10px;
+    font-size: 0.9em;
+  }
+
+  .festival-calendar td:nth-child(2) {
+    font-size: 1em; /* Smaller moon icons on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #calendar-2025,
+  #calendar-2026 {
+    padding: 10px;
+  }
+
+  #calendar-2025 h2,
+  #calendar-2026 h2 {
+    font-size: 1.4em;
+  }
+
+  #edit-dates-btn-2025,
+  #edit-dates-btn-2026 {
+    padding: 8px 16px;
+    font-size: 0.85em;
+  }
+
+  .festival-calendar th,
+  .festival-calendar td {
+    padding: 6px 8px;
+    font-size: 0.8em;
+  }
+
+  .festival-calendar td:nth-child(2) {
+    font-size: 0.9em; /* Even smaller moon icons */
+  }
+
+  /* Stack table headers and cells for readability on small screens */
+  .festival-calendar {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 }
