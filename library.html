@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meivazhi Saalai - Library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="library.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="left-section">
+                <div class="logo">
+                    <span>Meivazhi Saalai</span>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="main.html">Home</a></li>
+                        <li><a href="#" class="active">Library</a></li>
+                        <li><a href="#">MP3</a></li>
+                        <li><a href="#">Matrimony</a></li>
+                        <li><a href="#">Bus Timings</a></li>
+                        <li><a href="#">Calendar</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="language-selector">
+                <div class="header-actions">
+                    <button class="get-started-btn">Explore Meivazhi</button>
+                </div>
+                <i class="fas fa-globe"></i>
+                <span>EN</span>
+                <span class="separator">/</span>
+                <span>தமிழ்</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="library-header fade-in-initial">
+            <h1>Spiritual Library</h1>
+            <div class="search-filter">
+                <input type="text" id="search-books" placeholder="Search books...">
+                <select id="category-filter">
+                    <option value="">All Categories</option>
+                    <option value="vedas">Vedas</option>
+                    <option value="philosophy">Philosophy</option>
+                    <option value="spirituality">Spirituality</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="books-grid fade-in-initial" id="books-container">
+            <!-- Books will be dynamically added here -->
+        </section>
+
+        <div id="pdf-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <iframe id="pdf-viewer" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#library">Library</a></li>
+                    <li><a href="#mp3">MP3</a></li>
+                    <li><a href="#matrimony">Matrimony</a></li>
+                    <li><a href="#bus-timings">Bus Timings</a></li>
+                    <li><a href="#calendar">Calendar</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: contact@meivazhi.org</p>
+                <p>Phone: +91 98765 43210</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2024 Meivazhi Saalai. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
